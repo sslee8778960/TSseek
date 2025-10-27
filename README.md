@@ -14,7 +14,7 @@ Example record (128 data points):
 1;MULTIPOINT((0 2.0), (1 2.2), (2 2.4), ..., (127 5.0))
 ```
 
-Each MULTIPOINT contains coordinates `(timestamp value)` representing the time series. See `sample_data/time_series_25M_1.csv` for reference.
+Each MULTIPOINT contains coordinates `(timestamp value)` representing the time series. See `sample_data/time_series_sample.csv` for reference.
 
 **Input Data Requirements:**
 You need to prepare multiple CSV files of equal size:
