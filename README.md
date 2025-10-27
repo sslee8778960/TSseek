@@ -103,9 +103,9 @@ use the automated script:
 ## Requirements
 
 - Apache Spark 3.5.0+
-- PostgreSQL 12+ with PostGIS extension
-- Hadoop HDFS0
-- M02020110aven 3.6+
+- PostgreSQL 15 with PostGIS extension
+- Hadoop 
+- Maven 3.6+
 - Scala 2.13
 - Java 17+
 
