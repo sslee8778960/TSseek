@@ -2,6 +2,15 @@
 
 A regular expression-powered search framework for distributed time series datasets using segmentation, spatial indexing, and refinement.
 
+## Data Source:
+
+TSBS dataset - fuel consumption attribute:
+https://github.com/timescale/tsbs.git
+
+ECG dataset - A Large-scale 12-lead Electrocardiogram Database for Arrhythmia Study:
+https://physionet.org/content/ecg-arrhythmia/1.0.0/
+
+
 ## Data Format
 
 Time series data is stored as multiple CSV files with the format:
@@ -60,7 +69,7 @@ The JAR with dependencies will be generated at:
 target/regext_bigdata_research_shark-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-### Step 2: Load Input Time Series Data from HDFS to PostgreSQL (for later candidate retrieval)
+### Step 2: Load Input Time Series Data from HDFS to PostgreSQL (for later candidate time series retrieval)
 ```bash
 spark-submit \
   --class org.example.bigdata.PostgresDataLoader \
@@ -102,12 +111,12 @@ use the automated script:
 
 ## Requirements
 
-- Apache Spark 3.5.0+
+- Apache Spark 3.5.0
 - PostgreSQL 15 with PostGIS extension
-- Hadoop 
-- Maven 3.6+
+- Hadoop 3.3.6
 - Scala 2.13
-- Java 17+
+- Java 17
+- Maven 3.6
 
 ## Query Pattern Format
 
