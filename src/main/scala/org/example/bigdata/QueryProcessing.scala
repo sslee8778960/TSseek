@@ -351,7 +351,7 @@ object QueryProcessing {
             val batchResults = Await.result(Future.sequence(futures), Duration.Inf)
               .groupBy(_._1)
               .map { case (table, lists) =>
-                table -> lists.flatMap(_._2).toSet
+                table -> lists.map(_._2.toSet).reduce(_ intersect _)
               }
 
             val ts = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date())
